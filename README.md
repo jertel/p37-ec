@@ -32,6 +32,7 @@ To run and view current EC values (and enable the EC fan controller):
 `./p37-ec`
 
 Once the above command is execute you will see output similar to the following:
+```
   Usage: sudo ./p37-ec [<hex-offset[.bit]> <hex-value>]
     Ex: sudo ./p37-ec 0x01.6 0x07
 
@@ -57,7 +58,7 @@ Once the above command is execute you will see output similar to the following:
     Fan0 Custom Speed Setting   [0xB0]:   35%
     Fan1 Custom Speed Setting   [0xB1]:   35%
     Current Speed Setting       [0x64]:   0
-
+```
 The hexadecimal value in the square brackets is the offset within the EC for that 
 register. The 0x13.3 notation means bit 3 (starting at 0 from right to left) of 
 register 0x13.

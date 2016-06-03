@@ -32,31 +32,35 @@ To run and view current EC values (and enable the EC fan controller):
 `./p37-ec`
 
 Once the above command is execute you will see output similar to the following:
-Usage: sudo ./p37-ec [<hex-offset[.bit]> <hex-value>]
-   Ex: sudo ./p37-ec 0x01.6 0x07
+  Usage: sudo ./p37-ec [<hex-offset[.bit]> <hex-value>]
+    Ex: sudo ./p37-ec 0x01.6 0x07
 
->Current Embedded Controller Values:
->  USB Charge During Sleep     [0x01.5]: 1
->  USB Charge During Hibernate [0x07.2]: 0
->  Camera Enabled              [0x01.6]: 0
->  Bluetooth Enabled           [0x01.7]: 1
->  WiFi Enabled                [0x02.6]: 1
->  Touchpad Enabled            [0x03.5]: 1
->  Ambient Light               [0x66]:   1%
->  Screen Enabled              [0x09.3]: 0
->  Keyboard Backlight Mode     [0xD7]:   1
->  CPU Temp                    [0x60]:   32 C
->  GPU Temp                    [0x61]:   0 C
->  MLB Temp                    [0x62]:   25 C
->  Fan0 Speed                  [0xFC]:   2301 RPM
->  Fan1 Speed                  [0xFE]:   2269 RPM
->  Fan Control Enabled         [0x13.3]: 1
->  Fan Quiet Mode Enabled      [0x08.6]: 1
->  Fan Gaming Mode Enabled     [0x12.4]: 0
->  Fan Custom Mode Enabled     [0x13.0]: 0
->  Fan0 Custom Speed Setting   [0xB0]:   35%
->  Fan1 Custom Speed Setting   [0xB1]:   35%
->  Current Speed Setting       [0x64]:   0
+  Current Embedded Controller Values:
+    USB Charge During Sleep     [0x01.5]: 1
+    USB Charge During Hibernate [0x07.2]: 0
+    Camera Enabled              [0x01.6]: 0
+    Bluetooth Enabled           [0x01.7]: 1
+    WiFi Enabled                [0x02.6]: 1
+    Touchpad Enabled            [0x03.5]: 1
+    Ambient Light               [0x66]:   1%
+    Screen Enabled              [0x09.3]: 0
+    Keyboard Backlight Mode     [0xD7]:   1
+    CPU Temp                    [0x60]:   32 C
+    GPU Temp                    [0x61]:   0 C
+    MLB Temp                    [0x62]:   25 C
+    Fan0 Speed                  [0xFC]:   2301 RPM
+    Fan1 Speed                  [0xFE]:   2269 RPM
+    Fan Control Enabled         [0x13.3]: 1
+    Fan Quiet Mode Enabled      [0x08.6]: 1
+    Fan Gaming Mode Enabled     [0x12.4]: 0
+    Fan Custom Mode Enabled     [0x13.0]: 0
+    Fan0 Custom Speed Setting   [0xB0]:   35%
+    Fan1 Custom Speed Setting   [0xB1]:   35%
+    Current Speed Setting       [0x64]:   0
+
+The hexadecimal value in the square brackets is the offset within the EC for that 
+register. The 0x13.3 notation means bit 3 (starting at 0 from right to left) of 
+register 0x13.
 
 To modify an EC register (Ex: turn on fan to full speed):
 `sudo ./p37-ec 0x64 0x7`

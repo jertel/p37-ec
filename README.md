@@ -31,7 +31,7 @@ following command:
 To run and view current EC values (and enable the EC fan controller):
 `./p37-ec`
 
-Once the above command is execute you will see output similar to the following:
+Once the above command is executed you will see output similar to the following:
 ```
   Usage: sudo ./p37-ec [<hex-offset[.bit]> <hex-value>]
     Ex: sudo ./p37-ec 0x01.6 0x07

@@ -81,7 +81,7 @@ void fail(const char* msg) {
 
 int main(int argc, char** args) {
   FILE* ec = initEc();
-  if (!ec) fail("Unable to run initialize embedded controller; did you forget to use sudo?");
+  if (!ec) fail("Unable to initialize embedded controller; did you forget to use sudo?");
 
   if (argc == 3) {
     char* dotIdx = strchr(args[1], '.');
